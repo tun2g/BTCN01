@@ -5,10 +5,177 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>
-        hello
-    </h1>
+    <div class="wrapper">
+        <div class="header">
+            <div class="h-content">
+                Bài tập 1 - 20120617
+            </div>
+            <div class="nav">
+                    <ul class="nav-list">
+                        <li class="menu">Menu1</li>
+                        <li class="menu">Menu2</li>
+                        <li class="menu">Menu3</li>
+                        <li class="menu">Menu4</li>
+                        <li class="menu">Menu5</li>
+                    </ul>
+            </div>
+        </div>
+        <hr width="100%;" 
+        color="solid"; 
+        size="1";
+        > 
+        <div class="content">
+            <div class="main">
+                <h1>ĐĂNG KÍ HỌC PHẦN</h1>
+                <hr width="100%;" 
+                color="black"; 
+                size="1";>
+
+                <div class="c-content">
+                    <div class="form-list">
+                        <div class="form">
+                            <label for="">Mã số:</label>
+                            <input type="text" name="" id="code">
+                        </div>
+                        <div class="form">
+                            <label for="">Họ và tên:</label>
+                            <input type="text" name="" id="full-name">
+                        </div>
+                        <div class="form">
+                            <label for="">Địa chỉ:</label>
+                            <input type="text" name="" id="address">
+                        </div>
+                        <div class="form">
+                            <label for="">Điện thoại:</label>
+                            <input type="text" name="" id="phone">
+                        </div>
+                        <div class="form form-radio">
+                            <label for="">Giới tính:</label>
+                            <div class="input-side">
+                                <input type="radio" id="male"  value="male">
+                                <label for="html">Nam</label>
+                                <input type="radio" id="female"  value="femail">
+                                <label for="css">Nữ</label>
+                            </div>
+                        </div>
+                        <div class="form">
+                            <label for="">Ngày sinh:</label>
+                            <input type="text" name="" id="birthday" placeholder="mm/dd/yyyy">
+                        </div>
+                        <div class="form">
+                            <label for="">Email:</label>
+                            <input type="text" name="" id="email">
+                        </div>
+                    </div>
+                    <div class="subject">
+                        <div class="subjects">
+                            <div class="cont-subj--title left-title">
+                                Các môn học
+                            </div>
+                            <div class="list-subjs">
+                                <div class="sub">
+                                    Lập Trình Hướng Đối Tượng
+                                </div>
+                                <div class="sub">
+                                    Cấu trúc dữ liệu
+                                </div>
+                                <div class="sub">
+                                    Lập Trình Windows
+                                </div>
+                                <div class="sub">
+                                    NM Công Nghệ Phần Mềm
+                                </div>
+                                <div class="sub">
+                                    Trí Tuệ Nhân Tạo
+                                </div>
+                                <div class="sub">
+                                    Phát Triển Ứng Dụng Web
+                                </div>
+                                <div class="sub">
+                                    Cơ Sở Dữ Liệu
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-btns-list">
+                            <button class="c-btn">></button>
+                            <button class="c-btn">>></button>
+                            <button class="c-btn"><</button>
+                            <button class="c-btn"><<</button>
+                        </div>
+                        <div class="selected">
+                            <div class="cont-subj--title">
+                                Các môn đã chọn
+                            </div>
+                            <div class="list-subjs">
+                                <div class="sub">
+                                    Nhập Môn Lập Trình
+                                </div>
+                                <div class="sub">
+                                    Kĩ Thuật Lập Trình
+                                </div>
+                                <div class="sub">
+                                    Lập Trình ứng dụng java
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-btn">
+                        <button>Đăng kí</button>
+                        <button>Xóa hết</button>
+                    </div>
+                    <hr width="100%;" 
+                    color="black"; 
+                    size="1";>
+                    <div class="table">
+                        <div class="tb-code tb">
+                            <div class="column">Mã số</div>
+                            <div class="inf">20120001</div>
+                            <div class="inf even">20120123</div>
+                            <div class="inf">20120274</div>
+                            <div class="inf even">20120634</div>
+                        </div>
+                        <div class="space"></div>
+                        <div class="tb-fullname tb">
+                            <div class="column">Họ và tên</div>
+                            <div class="inf">Nguyễn Thị A</div>
+                            <div class="inf even">Trần Văn C</div>
+                            <div class="inf">Lê Văn G</div>
+                            <div class="inf even">Ngô Thị E</div>
+                        </div>
+                        <div class="space"></div>
+                        <div class="tb-sex tb">
+                            <div class="column">Giới tính</div>
+                            <div class="inf">Nữ</div>
+                            <div class="inf even">Nam</div>
+                            <div class="inf">Nam</div>
+                            <div class="inf even">Nữ</div>
+                        </div>
+                        <div class="space"></div>
+                        <div class="tb-birthday tb">
+                            <div class="column">Ngày sinh</div>
+                            <div class="inf">07/08/2002</div>
+                            <div class="inf even">12/24/2002</div>
+                            <div class="inf">06/12/2002</div>
+                            <div class="inf even">10/10/2002</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="side">
+                    
+            </div>
+        </div>
+
+        <div class="footer">
+
+        </div>
+    </div>
 </body>
 </html>
