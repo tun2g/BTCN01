@@ -50,7 +50,7 @@ ul{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
+    color: #2170dd;
 }
 
 /* content css */
@@ -62,10 +62,18 @@ ul{
     margin-right: 5px;
 }
 .main{
-    flex:1;
+    flex:70%;
 }
+.vl {
+    border-left: 0.3px dashed blue;
+    height:auto;
+    flex:1%;
+    margin-left:4px;
+  }
 .side{
-    width: 360px;
+    width: 29%;
+    display: flex;
+    flex-direction: column;
 }
 h1{
     text-align:  center;
@@ -87,6 +95,13 @@ h1{
 }
 .form{
     padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#msg{
+    color:red;
+    display: flex;
+    justify-content: flex-end;
 }
 .subject{
     flex:1;
@@ -104,7 +119,7 @@ input{
 .input-side{
     width: 310px;
 }
-.form.form-radio{
+.form.form-radio>.i-content{
     display: flex;
     flex-direction: row;
 }
@@ -215,4 +230,58 @@ input{
 }
 .even{
     background-color: #ffe2b1;
+}
+
+/* side */
+
+.s-news{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+.s-n-header{
+    background-color: #ff8207;
+    color: white;
+    padding: 3px;
+    padding-left: 10px;
+}
+.s-n-content{
+    padding: 10px;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    color:#397add;
+}
+
+/* footer */
+.footer{
+    height: 1.4em;
+    background-color: #ffe1b1;
+    color: #ffa71b;
+    border: 1px solid #e6a741;
+    border-radius: 3px;
+}
+.footer>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer>ul>li{
+    padding: 0 5px;
+    margin: 0 5px;
+    text-decoration: underline;
+}
+.footer>ul>li:first-child{
+    text-decoration: none;
+}
+
+/* js */
+.menu{
+    cursor: pointer;
+}
+.menu:hover{
+    color: #f1c89f;
+}
+.menu.active-menu{
+    color: #f1c89f;
 }

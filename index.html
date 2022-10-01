@@ -17,7 +17,7 @@
                 Bài tập 1 - 20120617
             </div>
             <div class="nav">
-                    <ul class="nav-list">
+                    <ul class="nav-list" id="nav-list">
                         <li class="menu">Menu1</li>
                         <li class="menu">Menu2</li>
                         <li class="menu">Menu3</li>
@@ -40,37 +40,59 @@
                 <div class="c-content">
                     <div class="form-list">
                         <div class="form">
-                            <label for="">Mã số:</label>
-                            <input type="text" name="" id="code">
+                            <div class="i-content">
+                                <label for="">Mã số:</label>
+                                <input type="text" name="" id="code">
+                            </div>
+                            <span id="msg"></span>
                         </div>
                         <div class="form">
-                            <label for="">Họ và tên:</label>
-                            <input type="text" name="" id="full-name">
+                            <div class="i-content">
+                                <label for="">Họ và tên:</label>
+                                <input type="text" name="" id="fullname">
+                            </div>
+                            
+                            <span id="msg"></span>
                         </div>
                         <div class="form">
-                            <label for="">Địa chỉ:</label>
-                            <input type="text" name="" id="address">
+                            <div class="i-content">
+                                <label for="">Địa chỉ:</label>
+                                <input type="text" name="" id="address">
+                            </div>
+                            <span id="msg"></span>
                         </div>
                         <div class="form">
-                            <label for="">Điện thoại:</label>
-                            <input type="text" name="" id="phone">
+                            <div class="i-content">
+                                <label for="">Điện thoại:</label>
+                                <input type="text" name="" id="phone">
+                            </div>
+                            <span id="msg"></span>
                         </div>
                         <div class="form form-radio">
-                            <label for="">Giới tính:</label>
-                            <div class="input-side">
-                                <input type="radio" id="male"  value="male">
-                                <label for="html">Nam</label>
-                                <input type="radio" id="female"  value="femail">
-                                <label for="css">Nữ</label>
+                            <div class="i-content">
+                                <label for="">Giới tính:</label>
+                                <div class="input-side">
+                                    <input type="radio" id="male"  value="male">
+                                    <label for="html">Nam</label>
+                                    <input type="radio" id="female"  value="femail">
+                                    <label for="css">Nữ</label>
+                                </div>
                             </div>
+                            <span id="msg"></span>
                         </div>
                         <div class="form">
-                            <label for="">Ngày sinh:</label>
-                            <input type="text" name="" id="birthday" placeholder="mm/dd/yyyy">
+                            <div class="i-content">
+                                <label for="">Ngày sinh:</label>
+                                <input type="text" name="" id="birthday" placeholder="mm/dd/yyyy">
+                            </div>
+                            <span id="msg"></span>
                         </div>
                         <div class="form">
-                            <label for="">Email:</label>
-                            <input type="text" name="" id="email">
+                            <div class="i-content">
+                                <label for="">Email:</label>
+                                <input type="text" name="" id="email">
+                            </div>
+                            <span id="msg"></span>
                         </div>
                     </div>
                     <div class="subject">
@@ -126,8 +148,8 @@
                         </div>
                     </div>
                     <div class="control-btn">
-                        <button>Đăng kí</button>
-                        <button>Xóa hết</button>
+                        <button id="register">Đăng kí</button>
+                        <button id="clear">Xóa hết</button>
                     </div>
                     <hr width="100%;" 
                     color="black"; 
@@ -167,15 +189,55 @@
                     </div>
                 </div>
             </div>
-
+            <div class="vl"></div>
+            
             <div class="side">
-                    
+                <div class="s-news">
+                    <div class="s-n-header">
+                        NEWS 1
+                    </div>
+                    <div class="s-n-content">
+                        content content content content content 
+                        content content content content content 
+                        content content content content content 
+                        content content content content content 
+                    </div>
+                </div> 
+                <div class="s-news">
+                    <div class="s-n-header">
+                        NEWS 2
+                    </div>
+                    <div class="s-n-content">
+                        content
+                    </div>
+                </div>  
+                <div class="s-news">
+                    <div class="s-n-header">
+                        NEWS 3
+                    </div>
+                    <div class="s-n-content">
+                        content
+                    </div>
+                </div>   
             </div>
         </div>
 
+        <hr width="100%;" 
+        color="solid"; 
+        size="1";
+        >
         <div class="footer">
-
+            <ul>
+                <li>Copyright Tun2g</li>
+                <li>Menu 1</li>
+                <li>Menu 2</li>
+                <li>Menu 3</li>
+                <li>Menu 4</li>
+                <li>menu 5</li>
+            </ul>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
