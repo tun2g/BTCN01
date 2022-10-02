@@ -153,7 +153,7 @@ input{
     align-items: flex-end;
 }
 .sub{
-    
+    max-width: 373px;
     width: 95%;
     border: solid 0.5px #cabfaf;
     padding: 2px;
@@ -283,9 +283,6 @@ input{
 .menu{
     cursor: pointer;
 }
-.menu:hover{
-    color: #f1c89f;
-}
 .menu.active-menu{
     color: #f1c89f;
 }
@@ -304,4 +301,11 @@ input{
 }
 .s-n-header{
     margin: 2px 0;
+}
+button{
+    cursor: pointer;
+}
+.f-menu-active{
+    background-color: #ffa007 !important;
+    color: white;
 }

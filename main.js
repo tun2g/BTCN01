@@ -2,8 +2,9 @@
 $(".menu").hover(function(){
     $(".menu").removeClass('active-menu')
     $(this).addClass('active-menu')
+    $('.f-menu').removeClass('f-menu-active')
+    $('.f-menu').eq($(this).index()).addClass('f-menu-active')
 })
-
 
 const validation= function(){
     function reset(ids){
@@ -13,32 +14,50 @@ const validation= function(){
         });
         })
     }
-    reset(["#email","#code","#fullname","#address","#phone","#birthday"])
+    function clear(ids){
+        Array.from(ids).forEach(id=> {
+            $(id).val("")
+        });
+    }
+    reset(["#email","#code","#fullname","#address","#sex","#phone","#birthday"])
 
     $("#register").click(function(e){
         e.preventDefault()
-
+        let oke=0
         if(validation.isCode('#code')){
             $("#code").parent().parent().children().eq(1).text(validation.isCode('#code'))
-        }
+        } else oke++ 
         if(validation.isEmail("#email")){
             $("#email").parent().parent().children().eq(1).text(validation.isEmail('#email'))
-        }
+        } else oke++
         if(validation.isBirthday('#birthday')){
             $("#birthday").parent().parent().children().eq(1).text(validation.isBirthday('#birthday'))
-        }
+        } else oke++
         if(validation.isTwoWords('#fullname')){
             $("#fullname").parent().parent().children().eq(1).text(validation.isTwoWords('#fullname'))
-        }
+        } else oke++
         if(validation.isTwoWords('#address')){
             $("#address").parent().parent().children().eq(1).text(validation.isTwoWords('#address'))
-        }
+        } else oke++
         if(validation.isPhone('#phone')){
             $("#phone").parent().parent().children().eq(1).text(validation.isPhone('#phone'))
-        }
+        } else oke++
         if(validation.isChecked()){
             $("#male").parent().parent().parent().children().eq(1).text(validation.isChecked())
-        } 
+        }
+        else {$("#male").parent().parent().parent().children().eq(1).text("")
+        oke++ }
+        if(oke==7){
+            alert($('#list2').children().text())
+            $('.tb-code').append(`<div class="inf">${$('#code').val()}</div>`)
+            $('.tb-fullname').append(`<div class="inf">${$('#fullname').val()}</div>`)
+            $('.tb-sex').append(`<div class="inf">${$('input[name=sex]:checked').val()}</div>`)
+            $('.tb-birthday').append(`<div class="inf">${$('#birthday').val()}</div>`)
+        }
+    })
+    $('#clear').click(function(){
+        clear(["#email","#code","#fullname","#address","#sex","#phone","#birthday"])
+        $('input[name=sex]').prop('checked', false); 
     })
 }
 validation.isCode=function(id){
@@ -54,7 +73,7 @@ validation.isEmail=function(id){
 }
 validation.isBirthday=function(id){
     value=$(id).val()
-    const regex=new RegExp(/^([12][0-9]|0[1-9]|3[01])[/](0[1-9]|1[0-2])[/](200[0-4]|1999)$/)
+    const regex=new RegExp(/^((0[1-9]|1[0-2])[/][12][0-9]|0[1-9]|3[01])[/](200[0-4]|1999)$/)
     return regex.test(value) ? "" :  'Ngày sinh Không hợp lệ'
 }
 validation.isTwoWords=function(id){
@@ -108,3 +127,14 @@ $(".s-n-header").click(function(){
     
     }
 })
+$(".side").tabs()
+$(".side").sortable({axis:"y",containment:".side"})
+$(".inf:odd").addClass('even')
+$("#list1 .sub").draggable({helper:"clone"})
+$("#list2").droppable({drop:function(e,ui){
+    $('#list2').append(ui.draggable)
+}})
+$("#list2 .sub").draggable({helper:"clone"})
+$("#list1").droppable({drop:function(e,ui){
+    $('#list1').append(ui.draggable)
+}})

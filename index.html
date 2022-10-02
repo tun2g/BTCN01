@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,7 +19,7 @@
             </div>
             <div class="nav">
                     <ul class="nav-list" id="nav-list">
-                        <li class="menu">Menu1</li>
+                        <li class="menu active-menu">Menu1</li>
                         <li class="menu">Menu2</li>
                         <li class="menu">Menu3</li>
                         <li class="menu">Menu4</li>
@@ -72,9 +73,9 @@
                             <div class="i-content">
                                 <label for="">Giới tính:</label>
                                 <div class="input-side">
-                                    <input type="radio" id="male" name="sex" value="male">
+                                    <input type="radio" id="male" name="sex" value="Nam">
                                     <label for="html">Nam</label>
-                                    <input type="radio" id="female" name="sex" value="femail">
+                                    <input type="radio" id="female" name="sex" value="Nữ">
                                     <label for="css">Nữ</label>
                                 </div>
                             </div>
@@ -159,33 +160,33 @@
                         <div class="tb-code tb">
                             <div class="column">Mã số</div>
                             <div class="inf">20120001</div>
-                            <div class="inf even">20120123</div>
+                            <div class="inf">20120123</div>
                             <div class="inf">20120274</div>
-                            <div class="inf even">20120634</div>
+                            <div class="inf">20120634</div>
                         </div>
                         <div class="space"></div>
                         <div class="tb-fullname tb">
                             <div class="column">Họ và tên</div>
                             <div class="inf">Nguyễn Thị A</div>
-                            <div class="inf even">Trần Văn C</div>
+                            <div class="inf">Trần Văn C</div>
                             <div class="inf">Lê Văn G</div>
-                            <div class="inf even">Ngô Thị E</div>
+                            <div class="inf">Ngô Thị E</div>
                         </div>
                         <div class="space"></div>
                         <div class="tb-sex tb">
-                            <div class="column">Giới tính</div>
+                            <div class="column"> G.tính</div>
                             <div class="inf">Nữ</div>
-                            <div class="inf even">Nam</div>
                             <div class="inf">Nam</div>
-                            <div class="inf even">Nữ</div>
+                            <div class="inf">Nam</div>
+                            <div class="inf">Nữ</div>
                         </div>
                         <div class="space"></div>
                         <div class="tb-birthday tb">
                             <div class="column">Ngày sinh</div>
                             <div class="inf">07/08/2002</div>
-                            <div class="inf even">12/24/2002</div>
+                            <div class="inf">12/24/2002</div>
                             <div class="inf">06/12/2002</div>
-                            <div class="inf even">10/10/2002</div>
+                            <div class="inf">10/10/2002</div>
                         </div>
                     </div>
                 </div>
@@ -195,7 +196,15 @@
             <div class="side">
                 <div class="s-news">
                     <div class="s-n-header">
-                        NEWS 1
+                        <!-- <div class="fa-solid fa-caret-down">
+                            
+                        </div> 
+                        <div class="fa-solid fa-up-down">
+                            
+                        </div> -->
+                        <div id="news">
+                            NEWS 1
+                        </div>
                     </div>
                     <div class="s-n-content">
                         content content content content content 
@@ -230,15 +239,16 @@
         <div class="footer">
             <ul>
                 <li>Copyright Tun2g</li>
-                <li>Menu 1</li>
-                <li>Menu 2</li>
-                <li>Menu 3</li>
-                <li>Menu 4</li>
-                <li>menu 5</li>
+                <li class="f-menu f-menu-active">Menu 1</li>
+                <li class="f-menu">Menu 2</li>
+                <li class="f-menu">Menu 3</li>
+                <li class="f-menu">Menu 4</li>
+                <li class="f-menu">menu 5</li>
             </ul>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
