@@ -119,6 +119,10 @@ input{
 .input-side{
     width: 310px;
 }
+.form.form-radio{
+    display: flex;
+    flex-direction: column;
+}
 .form.form-radio>.i-content{
     display: flex;
     flex-direction: row;
@@ -284,4 +288,20 @@ input{
 }
 .menu.active-menu{
     color: #f1c89f;
+}
+.list-selected>div{
+    background-color: #fffa90;
+}
+.sub-active{
+    background-color: #f39814 !important;
+    color: white;
+}
+.shrink{
+    background-color: #ffd8b1 !important;
+}
+.dnone{
+    display: none;
+}
+.s-n-header{
+    margin: 2px 0;
 }

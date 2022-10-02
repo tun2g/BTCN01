@@ -72,14 +72,15 @@
                             <div class="i-content">
                                 <label for="">Giới tính:</label>
                                 <div class="input-side">
-                                    <input type="radio" id="male"  value="male">
+                                    <input type="radio" id="male" name="sex" value="male">
                                     <label for="html">Nam</label>
-                                    <input type="radio" id="female"  value="femail">
+                                    <input type="radio" id="female" name="sex" value="femail">
                                     <label for="css">Nữ</label>
                                 </div>
                             </div>
                             <span id="msg"></span>
                         </div>
+                        <span id="msg"></span>  
                         <div class="form">
                             <div class="i-content">
                                 <label for="">Ngày sinh:</label>
@@ -97,10 +98,10 @@
                     </div>
                     <div class="subject">
                         <div class="subjects">
-                            <div class="cont-subj--title left-title">
+                            <div class="cont-subj--title left-title" >
                                 Các môn học
                             </div>
-                            <div class="list-subjs">
+                            <div class="list-subjs "id="list1">
                                 <div class="sub">
                                     Lập Trình Hướng Đối Tượng
                                 </div>
@@ -125,16 +126,16 @@
                             </div>
                         </div>
                         <div class="c-btns-list">
-                            <button class="c-btn">></button>
-                            <button class="c-btn">>></button>
-                            <button class="c-btn"><</button>
-                            <button class="c-btn"><<</button>
+                            <button class="c-btn" id="list-btn1">></button>
+                            <button class="c-btn" id="list-btn2">>></button>
+                            <button class="c-btn" id="list-btn3"><</button>
+                            <button class="c-btn" id="list-btn4"><<</button>
                         </div>
                         <div class="selected">
                             <div class="cont-subj--title">
                                 Các môn đã chọn
                             </div>
-                            <div class="list-subjs">
+                            <div class="list-subjs list-selected" id="list2">
                                 <div class="sub">
                                     Nhập Môn Lập Trình
                                 </div>
