@@ -10,14 +10,15 @@ body{
 .header{
     height: 6em;
     width: 100%;
-    background-color: #18c0e5;
+    background-image:linear-gradient(rgba(82,209,238,1),rgba(15,167,202,1));
     border-radius: 4px;
     margin-bottom: 25px;
+    box-shadow: 2px 4px #c5d1d3;
 }
 .h-content{
     height: 100%;
     font-size: 2rem;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Anton', sans-serif;
     color:white;
     font-weight: 500;
     display: flex;
@@ -31,10 +32,13 @@ body{
     display: flex;
     flex-direction: row;
     position: absolute;
-    width: 400px;
+    width: 33%;
+    min-width: 300px;
     top:5.5rem;
-    left:35%;
+    left:33%;
 }
+
+
 
 li{
     list-style: none;
@@ -71,7 +75,7 @@ ul{
     margin-left:4px;
   }
 .side{
-    width: 29%;
+    width: 360px;
     display: flex;
     flex-direction: column;
 }
@@ -212,6 +216,10 @@ input{
     text-align: center;
     flex:35%;
 }
+.tb-fullname>.inf{
+    text-align: left;
+    padding-left: 3px;
+}
 .tb-sex{
     display: flex;
     flex-direction: column;
@@ -229,6 +237,7 @@ input{
     color: white;
     padding: 2px 0;
 }
+
 .inf{
     padding: 2px 0;
 }
@@ -239,11 +248,14 @@ input{
 /* side */
 
 .s-news{
+    
     display:flex;
     flex-direction: column;
     width: 100%;
 }
 .s-n-header{
+    border: 0.5px solid #5780ff;
+    border-radius: 2px;
     background-color: #ff8207;
     color: white;
     padding: 3px;
@@ -285,6 +297,7 @@ input{
 }
 .menu.active-menu{
     color: #f1c89f;
+
 }
 .list-selected>div{
     background-color: #fffa90;
@@ -295,6 +308,8 @@ input{
 }
 .shrink{
     background-color: #ffd8b1 !important;
+    border:  none;
+
 }
 .dnone{
     display: none;
@@ -309,3 +324,26 @@ button{
     background-color: #ffa007 !important;
     color: white;
 }
+
+@media only screen and (max-width: 710px) {
+    .nav {
+      left:25%;
+    }
+    .content.vl{
+        display: none;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .sub{
+        max-width: 200px;
+    }
+  }
+@media only screen and (max-width: 600px) {
+    .nav {
+      left:20%;
+    }
+    .sub{
+        max-width: 200px;
+    }
+  }

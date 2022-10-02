@@ -1,4 +1,3 @@
-
 $(".menu").hover(function(){
     $(".menu").removeClass('active-menu')
     $(this).addClass('active-menu')
@@ -19,7 +18,7 @@ const validation= function(){
             $(id).val("")
         });
     }
-    reset(["#email","#code","#fullname","#address","#sex","#phone","#birthday"])
+    reset(["#email","#code","#fullname","#address","#sex","#phone"])
 
     $("#register").click(function(e){
         e.preventDefault()
@@ -29,9 +28,6 @@ const validation= function(){
         } else oke++ 
         if(validation.isEmail("#email")){
             $("#email").parent().parent().children().eq(1).text(validation.isEmail('#email'))
-        } else oke++
-        if(validation.isBirthday('#birthday')){
-            $("#birthday").parent().parent().children().eq(1).text(validation.isBirthday('#birthday'))
         } else oke++
         if(validation.isTwoWords('#fullname')){
             $("#fullname").parent().parent().children().eq(1).text(validation.isTwoWords('#fullname'))
@@ -47,44 +43,36 @@ const validation= function(){
         }
         else {$("#male").parent().parent().parent().children().eq(1).text("")
         oke++ }
-        if(oke==7){
+        if(oke==6){
             alert($('#list2').children().text())
             $('.tb-code').append(`<div class="inf">${$('#code').val()}</div>`)
             $('.tb-fullname').append(`<div class="inf">${$('#fullname').val()}</div>`)
             $('.tb-sex').append(`<div class="inf">${$('input[name=sex]:checked').val()}</div>`)
-            $('.tb-birthday').append(`<div class="inf">${$('#birthday').val()}</div>`)
+            date=$('input[name=date]').val()
+
+            $('.tb-birthday').append(`<div class="inf">${date.slice(5,7)}/${date.slice(8,10)}/${date.slice(0,4)}</div>`)
         }
     })
     $('#clear').click(function(){
-        clear(["#email","#code","#fullname","#address","#sex","#phone","#birthday"])
+        clear(["#email","#code","#fullname","#address","#sex","#phone"])
         $('input[name=sex]').prop('checked', false); 
     })
 }
 validation.isCode=function(id){
-    const vl=$(id).val()
-    console.log(vl)
-    var regex=new RegExp( /^(1[7-9]|2[0-2])[0-9]{6}$/)
-    return regex.test(vl) ? undefined :  'Phải có 8 chữ số bắt đầu từ 17-22'
+    let regex=new RegExp( /^(1[7-9]|2[0-2])[0-9]{6}$/)
+    return regex.test($(id).val()) ? undefined :  'Phải có 8 chữ số bắt đầu từ 17-22'
 }
 validation.isEmail=function(id){
-    const vl=$(id).val()
-    var regex=new RegExp( /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,}){1,3}$/)
-    return regex.test(vl) ? undefined :  'Email không hợp lệ'    
-}
-validation.isBirthday=function(id){
-    value=$(id).val()
-    const regex=new RegExp(/^((0[1-9]|1[0-2])[/][12][0-9]|0[1-9]|3[01])[/](200[0-4]|1999)$/)
-    return regex.test(value) ? "" :  'Ngày sinh Không hợp lệ'
+    let regex=new RegExp( /^[a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,}){1,3}$/)
+    return regex.test($(id).val()) ? undefined :  'Email không hợp lệ'    
 }
 validation.isTwoWords=function(id){
-    value=$(id).val()
-    const regex=new RegExp(/[A-Za-z0-9]{1,}\s[A-Za-z0-9]{1,}$/)
-    return regex.test(value) ? "" :  'Phải có ít nhất 2 từ'
+    let regex=new RegExp(/[A-Za-z0-9]{1,}\s[A-Za-z0-9]{1,}$/)
+    return regex.test($(id).val()) ? "" :  'Phải có ít nhất 2 từ'
 }
 validation.isPhone=function(id){
-    value=$(id).val()
-    const regex = new RegExp(/^[0]+[0-9]{9}/);
-    return regex.test(value) ? "" :  'Số điện thoại không hợp lệ'
+    let regex = new RegExp(/^[0]+[0-9]{9}/);
+    return regex.test($(id).val()) ? "" :  'Số điện thoại không hợp lệ'
 }
 validation.isChecked=function(){
     const checked = $('input[name=sex]:checked').length;
@@ -124,7 +112,6 @@ $(".s-n-header").click(function(){
     else {
         $(this).addClass('shrink')
         $(this).parent().children().eq(1).addClass("dnone")
-    
     }
 })
 $(".side").tabs()
